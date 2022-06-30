@@ -1,4 +1,30 @@
 .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
   padding: 0px 1.6rem;
-  height: 4.1rem;
+  line-height: 4.1rem;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid transparent;
+  transition: color 0.3s, background-color 0.3s;
+
+  &--primary {
+    background-color: $primary-default;
+    border-color: $primary-default;
+
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+
+  &--outline {
+    border: 1px solid #ffffff;
+    &:hover {
+      color: $neutral-200;
+      background-color: #ffffff;
+    }
+  }
 }
