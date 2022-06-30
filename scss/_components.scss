@@ -1,14 +1,14 @@
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0px 1.6rem;
-  line-height: 4.1rem;
-  border-radius: 3px;
-  font-size: 1.4rem;
+  gap: 8px;
+  padding: 0rem 16px;
+  line-height: 41px;
+  border-radius: 0.3rem;
+  font-size: 14px;
   text-align: center;
   color: #ffffff;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
   transition: color 0.3s, background-color 0.3s;
 
   &--primary {
@@ -21,10 +21,52 @@
   }
 
   &--outline {
-    border: 1px solid #ffffff;
+    border: 0.1rem solid #ffffff;
     &:hover {
       color: $neutral-200;
       background-color: #ffffff;
+    }
+  }
+}
+
+.game-card {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+
+  &:hover {
+    .game-card__image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 0.4rem;
+    width: 100%;
+    height: 383px;
+    margin-bottom: 24px;
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__information {
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      color: #e5e5e5;
+      margin-bottom: 0.4rem;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      color: rgba(229, 229, 229, 0.8);
     }
   }
 }
